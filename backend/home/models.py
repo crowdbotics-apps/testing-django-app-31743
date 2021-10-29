@@ -12,3 +12,7 @@ class Userdetails(models.Model):
         max_length=256,
     )
     address = models.TextField()
+    age = models.IntegerField(
+        null=True,
+        blank=True,
+    )
