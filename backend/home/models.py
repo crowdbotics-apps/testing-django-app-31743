@@ -16,3 +16,17 @@ class Userdetails(models.Model):
         null=True,
         blank=True,
     )
+
+
+class Sample(models.Model):
+    "Generated Model"
+    user = models.OneToOneField(
+        "users.User",
+        on_delete=models.CASCADE,
+        related_name="sample_user",
+    )
+    user_details = models.OneToOneField(
+        "home.Userdetails",
+        on_delete=models.CASCADE,
+        related_name="sample_user_details",
+    )
